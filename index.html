@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="manifest.json" rel="manifest">
+	  <script>
+if ('serviceWorker' in navigator ) {
+  
+  navigator.serviceWorker.register('service-worker.js', {
+    scope: './'
+  }).then(function(registration) {
+    if (typeof registration.update == 'function') {
+      registration.update();
+    }
+  }).catch(function(e) {
+    console.error('Error during service worker registration:', e);
+  });
+  
+}
+		  localStorage.setItem('nome','Andre')
+		  localStorage.getItem('nome')
+		  
+		  localStorage.setItem('sobrenome','Soares')
+		  
+		  localStorage.setItem('apelido','Cachorro')
+		  
+		  localStorage.setItem('idade',35)
+		  
+		  
+  </script>
+<title>Criar var</title>
+</head>
+
+<body>
+
+	
+</body>
+</html>
